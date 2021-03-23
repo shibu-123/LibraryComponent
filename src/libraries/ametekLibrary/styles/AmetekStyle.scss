@@ -1,0 +1,527 @@
+@import './box';
+@import './well';
+
+@font-face {
+  font-family: 'Segoe UI';
+  src: url("../fonts/SegoeUI.eot") format("embedded-opentype");
+  src: url("../fonts/SegoeUI.ttf") format("ttf"), url("../fonts/SegoeUI.woff") format("woff"), url("../fonts/SegoeUI.svg") format("svg");
+}
+
+@font-face {
+  font-family: 'SegoeUI-Bold';
+  src: url("../fonts/SegoeUI-Bold.eot") format("embedded-opentype");
+  src: url("../fonts/SegoeUI-Bold.ttf") format("ttf"), url("../fonts/SegoeUI-Bold.woff") format("woff"), url("../fonts/SegoeUI-Bold.svg") format("svg");
+}
+
+@font-face {
+  font-family: 'SegoeUI-Italic';
+  src: url("../fonts/SegoeUI-Italic.eot") format("embedded-opentype");
+  src: url("../fonts/SegoeUI-Italic.ttf") format("ttf"), url("../fonts/SegoeUI-Italic.woff") format("woff"), url("../fonts/SegoeUI-Italic.svg") format("svg");
+}
+
+@font-face {
+  font-family: 'SegoeUI-BoldItalic';
+  src: url("../fonts/SegoeUI-BoldItalic.eot") format("embedded-opentype");
+  src: url("../fonts/SegoeUI-BoldItalic.ttf") format("ttf"), url("../fonts/SegoeUI-BoldItalic.woff") format("woff"), url("../fonts/SegoeUI-BoldItalic.svg") format("svg");
+}
+
+@font-face {
+  font-family: 'SegoeUI-SemiBold';
+  src: url("../fonts/SegoeUI-SemiBold.eot") format("embedded-opentype");
+  src: url("../fonts/SegoeUI-SemiBold.ttf") format("ttf"), url("../fonts/SegoeUI-SemiBold.woff") format("woff"), url("../fonts/SegoeUI-SemiBold.svg") format("svg");
+}
+
+
+
+/* CSS Document */
+/* CSS Document */
+body {
+  font-family: 'Segoe UI';
+}
+
+.font-14 {
+  font-size: 14px;
+}
+
+.font-16 {
+  font-size: 16px !important;
+}
+
+.segoeui-semibold {
+  font-family: SegoeUI-SemiBold;
+}
+
+.bg-gray {
+  background: #f5f5f5;
+  border: 1px solid #dedede;
+}
+
+.table td,
+.table th {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.self-evaluation .table td,
+.table th {
+  padding: 10px !important;
+}
+
+.ametek-main-header {
+  font-family: 'SegoeUI-Bold';
+  font-size: 20px;
+}
+
+.ametek-header {
+  font-family: 'SegoeUI-Bold';
+  font-size: 19px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.ametek-label {
+  font-family: 'SegoeUI-Bold';
+  font-size: 15px;
+}
+
+.mandatory:after {
+  content: '*';
+  color: #f80000;
+}
+
+.nav-link {
+  border-bottom: 3px solid #fff;
+}
+
+.menu-active {
+  border-bottom: 3px solid #0072c9;
+}
+
+.nav-link:hover {
+  border-bottom-color: #0072c9;
+}
+
+[data-toggle="collapse"] .fa:before {
+  content: "\f139";
+}
+
+[data-toggle="collapse"].collapsed .fa:before {
+  content: "\f13a";
+}
+
+.navbar-light {
+  border-bottom: 1px solid #f3f3f3;
+  background: #fff;
+}
+
+li.nav-item {
+  margin: 0 10px;
+}
+
+.application-name {
+  margin-left: 15px;
+}
+
+
+.search-white-icon {
+  background: url(../images/search-white.png) no-repeat;
+  width: 16px;
+  height: 16px;
+  float: left;
+}
+
+.search-btn-grey {
+  background: #ababab;
+}
+
+.search-icon-border {
+  border: 1px solid #ced4da;
+}
+
+.border-left-0 {
+  border-left: 0 !important;
+}
+
+.border-radius-0 {
+  border-bottom-left-radius: 0px !important;
+  border-top-left-radius: 0px !important;
+}
+
+.help-icon,
+.sorting {
+  cursor: pointer;
+}
+
+.edit-icon {
+  background: url(../images/edit-icon.png) no-repeat;
+}
+
+.delete-icon {
+  background: url(../images/delete-icon.png) no-repeat;
+}
+
+.fileclose-icon {
+  background: url(../images/fileclose-icon.png) no-repeat;
+}
+
+.edit-icon,
+.delete-icon,
+.c {
+  width: 22px;
+  height: 22px;
+}
+
+
+.score-5 {
+  background: #a80000;
+  color: #fff;
+}
+
+.score-4 {
+  background: #fe0000;
+  color: #fff;
+}
+
+.score-3 {
+  background: #ff5253;
+  color: #000;
+}
+
+.score-2 {
+  background: #ff7b7c;
+  color: #000;
+}
+
+.score-1 {
+  background: #ffbaba;
+  color: #000;
+}
+
+.btn-inprogress {
+  background: #ffa904;
+  color: #fff;
+  padding: 2px 10px !important;
+  font-size: 14px !important;
+  cursor: none !important;
+}
+
+.btn-completed {
+  background: #28a629;
+  color: #fff;
+  padding: 2px 10px !important;
+  font-size: 14px !important;
+  cursor: none !important;
+}
+
+.btn-notstarted {
+  background: #797979;
+  color: #fff;
+  padding: 2px 10px !important;
+  font-size: 14px !important;
+  cursor: none !important;
+}
+
+.btn-draft {
+  background: #2c7ed2;
+  color: #fff;
+  padding: 2px 10px !important;
+  font-size: 14px !important;
+  cursor: none !important;
+}
+
+.container-fluid.ametek-footer {
+  background: #f4f4f4;
+  padding: 10px 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #767676;
+}
+
+.custom-group .input-group {
+  float: left;
+  width: auto;
+  margin-left: 15px;
+}
+
+.custom-margin-header {
+  margin-top: 90px;
+}
+
+.input-group.audit-status {
+  margin-top: 7px;
+}
+
+.audit-status-label {
+  margin-right: 10px;
+}
+
+.form-edit {
+  position: absolute;
+  right: 25px;
+}
+
+/* Accordion Customization */
+.custom-card {
+  padding: 0;
+}
+
+.accordion-header {
+  padding: 12px;
+  font-size: 16px;
+  color: #4a4a4a;
+  font-family: 'SegoeUI-Bold';
+  background: #ebf4fb;
+}
+
+.accordion-header:hover,
+.accordion-header:focus {
+  text-decoration: none;
+  color: #000;
+}
+
+.accordion-header.collapsed {
+  background: #f3f3f3;
+  font-family: 'SegoeUI-SemiBold';
+}
+
+#collapseOne {
+  position: relative;
+}
+
+a.download-template {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.th-padding {
+  padding-left: 35px !important;
+}
+
+.audit-sprite {
+  background: url(../images/audit-sprite.png) no-repeat;
+  width: 18px;
+  height: 25px;
+  display: inline-block;
+}
+
+.core-review-completed {
+  background-position: -11px -1px;
+}
+
+.auditor-review-completed {
+  background-position: -11px -42px;
+}
+
+.core-review-not-completed {
+  background-position: -55px -2px;
+}
+
+.auditor-review-not-completed {
+  background-position: -54px -45px;
+}
+
+.custom-tab .nav-link.active {
+  background: #0072c9;
+  color: #fff;
+}
+
+.errormsg {
+  color: #ff0000;
+  font-size: 12px;
+}
+
+.delete-popupicon {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+}
+
+.delete-popupicon img {
+  width: 100%;
+}
+
+.ReactModal__Content.ReactModal__Content--after-open {
+  left: 0 !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+}
+
+.modal-header.border-none {
+  border: none;
+}
+
+.modal-size {
+  width: 380px;
+}
+
+.text-orange {
+  color: #f16714;
+}
+
+.DayPickerInput input {
+  border: 1px solid #c8c8c8;
+  padding: 8px;
+  width: 100%;
+}
+
+.searchBoxContainer_b3be625c {
+  display: none;
+}
+
+.calender-icon-pos {
+  left: 143px;
+  top: 9px;
+}
+
+.search-icon-blue {
+  color: #fff;
+}
+
+.search-border {
+  border: 1px solid #ced4da;
+}
+
+.border-none {
+  border: none;
+}
+
+.tooltip-inner {
+  background-color: #444;
+}
+
+.tooltip.bs-tooltip-right .arrow:before {
+  border-right-color: #444 !important;
+}
+
+.tooltip.bs-tooltip-left .arrow:before {
+  border-right-color: #444 !important;
+}
+
+.tooltip.bs-tooltip-bottom .arrow:before {
+  border-right-color: #444 !important;
+}
+
+.tooltip.bs-tooltip-top .arrow:before {
+  border-right-color: #00cc00 !important;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog.create-new-modal {
+    max-width: 960px;
+  }
+}
+
+.export-excel-btn {
+  padding: 10px !important;
+}
+
+img.delteattachment.ml-2 {
+  cursor: pointer;
+}
+
+.border-radius-left {
+  border-top-left-radius: 4px !important;
+  border-bottom-left-radius: 4px !important;
+}
+
+.tooltip-inner {
+  max-width: 1300px !important;
+}
+
+react-datepicker input {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 100%;
+}
+
+.DayPicker-Day,
+.DayPicker-WeekNumber {
+  padding: 2px !important;
+  font-size: 12px;
+}
+
+.DayPicker-Caption>div {
+  font-size: 14px !important;
+}
+
+.DayPicker-Month {
+  margin: 10px 0 !important;
+}
+
+.DayPicker-Navbar {
+  position: relative;
+  top: -5px;
+}
+
+.DayPicker-wrapper {
+  padding-bottom: 0 !important;
+}
+
+react-datepicker .DayPickerInput {
+  width: 100%;
+}
+
+react-datepicker .DatePicker {
+  width: 100%;
+}
+
+div[data-automationid="SiteHeader"] {
+  display: none;
+}
+
+li.nav-item:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  margin: 0 !important;
+}
+
+span.text-bold {
+  font-weight: bold;
+}
+
+.add-icon {
+  background-image: url(../images/down-icon.png);
+  width: 17px;
+  height: 16px;
+  float: left;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  margin: 5px 5px 0px 0px;
+}
+
+.accordion-toggle.collapsed .add-icon {
+  background-image: url(../images/up-icon.png);
+}
+
+.text-overflow {
+  max-width: 180px;
+  float: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.public-DraftStyleDefault-block {
+  position: relative !important;
+  white-space: normal !important;
+  margin: 0 !important;
+}
+
+.Responsive-input {
+  padding: 0px;
+  border: 1px solid #ced4da;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+
+@media screen and (min-width: 300px) and (max-width: 480px) {
+  .custom-group .input-group.custom-padding {
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 10px;
+  }
+
+}

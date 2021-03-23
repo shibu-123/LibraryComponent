@@ -1,0 +1,9 @@
+{
+  "id": "caac492d-d347-4bd5-89bd-f0929ee0e426",
+  "alias": "AmetekLibraryLibrary",
+  "componentType": "Library",
+
+  // The "*" signifies that the version should be taken from the package.json
+  "version": "*",
+  "manifestVersion": 2
+}

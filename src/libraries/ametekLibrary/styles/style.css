@@ -1,0 +1,19 @@
+header {
+  background: lightblue;
+}
+
+.Responsive-input {
+  padding: 0px;
+  border: 1px solid #ced4da;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 300px) and (max-width: 480px) {
+  .custom-group .input-group.custom-padding {
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 10px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
